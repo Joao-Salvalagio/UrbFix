@@ -1,0 +1,15 @@
+services:
+  postgres-urbfix:
+    image: postgres:16
+    container_name: db_urbfix
+    environment:
+      POSTGRES_DB: urbfix_db
+      POSTGRES_USER: urbfix_admin
+      POSTGRES_PASSWORD: urbfix_password
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata_urbfix:/var/lib/postgresql/data
+
+volumes:
+  pgdata_urbfix:
