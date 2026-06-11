@@ -1,0 +1,7 @@
+<div class="kpi kpi--{{ tone() }}">
+  <div class="kpi__label">{{ label() }}</div>
+  <div class="kpi__value">{{ value() }}</div>
+  @if (hint()) {
+    <div class="kpi__hint">{{ hint() }}</div>
+  }
+</div>

@@ -1,0 +1,54 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+
+  &__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &--aberto {
+    background-color: #fef2f2;
+    color: #dc2626;
+
+    .badge__dot {
+      background-color: #ef4444;
+    }
+  }
+
+  &--em-analise {
+    background-color: #fffbeb;
+    color: #d97706;
+
+    .badge__dot {
+      background-color: #f59e0b;
+    }
+  }
+
+  &--em-execucao {
+    background-color: #eff6ff;
+    color: #2563eb;
+
+    .badge__dot {
+      background-color: #3b82f6;
+    }
+  }
+
+  &--resolvido {
+    background-color: #f0fdf4;
+    color: #16a34a;
+
+    .badge__dot {
+      background-color: #22c55e;
+    }
+  }
+}

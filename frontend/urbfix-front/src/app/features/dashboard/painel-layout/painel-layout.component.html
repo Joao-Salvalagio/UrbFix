@@ -1,0 +1,49 @@
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar__brand">
+      <div class="sidebar__logo">
+        <span class="sidebar__logo-icon">U</span>
+      </div>
+      <span class="sidebar__brand-name">UrbFix</span>
+    </div>
+
+    <nav class="sidebar__nav" aria-label="Navegação principal">
+      <a
+        routerLink="/"
+        routerLinkActive="sidebar__nav-item--active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="sidebar__nav-item"
+        aria-current="page"
+      >
+        <svg class="sidebar__nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7" rx="1" />
+          <rect x="14" y="3" width="7" height="7" rx="1" />
+          <rect x="3" y="14" width="7" height="7" rx="1" />
+          <rect x="14" y="14" width="7" height="7" rx="1" />
+        </svg>
+        <span>Fila de Prioridade</span>
+      </a>
+    </nav>
+
+    <div class="sidebar__footer">
+      <span class="sidebar__version">v1.0.0</span>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header class="header" role="banner">
+      <div class="header__title-group">
+        <h1 class="header__title">Painel Operacional</h1>
+        <span class="header__subtitle">Prefeitura Municipal — UrbFix</span>
+      </div>
+      <div class="header__meta" aria-label="Status do sistema">
+        <span class="header__status-dot" aria-hidden="true"></span>
+        <span class="header__status-label">Sistema ativo</span>
+      </div>
+    </header>
+
+    <main class="content" id="main-content" tabindex="-1">
+      <router-outlet />
+    </main>
+  </div>
+</div>
